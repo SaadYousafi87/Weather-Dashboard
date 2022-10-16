@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="./Assets/CSS/reset.css">
+    <link rel="stylesheet" href="./Assets/CSS/style.css">
 </head>
 <body>
 
@@ -14,16 +16,59 @@
 
     <section id="container">
         <aside id="search">
+            <h2>Search for a City:</h2>
+            <input id="search-input" name="search-bar" placeholder="San Diego">
+            <button id="btn-search">Search</button>
 
         </aside>
 
         <main id="forecast">
             <section id="daily-forecast">
-
+                <h2 class="daily-info">Atlanta (9/13/2022)</h2>
+                <p class="daily-info">Temp: 76.64 F</p>
+                <p class="daily-info">Wind: 8.43 MPH</p>
+                <p class="daily-info">Humidity: 44 %</p>
             </section>
+
             <h2>5-Day Forecast:</h2>
+
             <section id="five-day-forecast">
-                
+
+                <div id="day-one" class="five-days">
+                    <h3 class="five-info">9/14/2022</h3>
+                    <p class="five-info">Temp: 63.55 F</p>
+                    <p class="five-info">Wind: 3.94 MPH</p>
+                    <p class="five-info">Humidity: 63 %</p>
+                </div>
+
+                <div id="day-two" class="five-days">
+                    <h3 class="five-info">9/14/2022</h3>
+                    <p class="five-info">Temp: 63.55 F</p>
+                    <p class="five-info">Wind: 3.94 MPH</p>
+                    <p class="five-info">Humidity: 63 %</p>
+                </div>
+
+                <div id="day-three" class="five-days">
+                    <h3 class="five-info">9/14/2022</h3>
+                    <p class="five-info">Temp: 63.55 F</p>
+                    <p class="five-info">Wind: 3.94 MPH</p>
+                    <p class="five-info">Humidity: 63 %</p>
+                </div>
+
+                <div id="day-four" class="five-days">
+                    <h3 class="five-info">9/14/2022</h3>
+                    <p class="five-info">Temp: 63.55 F</p>
+                    <p class="five-info">Wind: 3.94 MPH</p>
+                    <p class="five-info">Humidity: 63 %</p>
+                </div>
+
+                <div id="day-five" class="five-days">
+                    <h3 class="five-info">9/14/2022</h3>
+                    <p class="five-info">Temp: 63.55 F</p>
+                    <p class="five-info">Wind: 3.94 MPH</p>
+                    <p class="five-info">Humidity: 63 %</p>
+                </div>
+
             </section>
         </main>
     </section>
