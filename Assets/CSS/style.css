@@ -1,0 +1,97 @@
+html, body {
+    margin: 0;
+}
+
+header h1 {
+    text-align: center;
+    background-color: blue;
+    color: white;
+    margin: 0;
+    padding: 10px;
+    font-size: 36px;
+}
+
+/* style rules for section containing content
+    inside aside tag */
+#container {
+    display: flex;
+    margin-top: 2%;
+}
+
+#search {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+#search h2 {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#search-input {
+    line-height: 1.6;
+}
+
+#btn-search {
+    color: white;
+    background-color: #6991e3;
+    padding: 5px 0;
+}
+
+/* style rules for section with id = daily-forecast
+     inside main tag */
+
+#forecast {
+    width: 80%;
+}
+
+#forecast h2 {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#daily-forecast {
+    border: solid black 1px;
+    margin-bottom: 1%;
+}
+
+#daily-forecast h2 {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.daily-info {
+    font-size: 16px;
+    margin-bottom: 1%;
+    padding: 5px;
+    font-weight: bold;
+}
+
+/* style rules for section with id = five-day-forecast
+    inside main tag */
+
+#five-day-forecast {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1%;
+}
+
+.five-days h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.five-days {
+    background-color: #323d4f;
+    color: white;
+    font-size: 16px;
+    padding-right: 5%;
+    padding-left: .5%;
+    padding-top: .5%;
+}
+
+.five-info {
+    margin-bottom: 15%;
+}
