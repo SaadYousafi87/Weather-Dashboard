@@ -116,6 +116,7 @@ function getFiveDayWeatherInfo(){
 function addButton(cityName){
     var btn = document.createElement("button");
     btn.setAttribute("id", cityName);
+    btn.setAttribute("class", "previous");
     btn.textContent = cityName;
 
     asideEl.appendChild(btn);
@@ -133,6 +134,14 @@ document.addEventListener("click", function(event){
         getGeoLocation(cityName);
         getCurrentWeatherInfo(currentTempEl, currentWindEl, currentHumidEl);
         addButton(cityName);
+        getFiveDayWeatherInfo();
+    }
+    if(child.matches(".previous")){
+        cityName = child.getAttribute("id");
+        var date = moment().format("M/D/YYYY");
+        currentCityEl.textContent = cityName+" ("+date+")";
+        getGeoLocation(cityName);
+        getCurrentWeatherInfo(currentTempEl, currentWindEl, currentHumidEl);
         getFiveDayWeatherInfo();
     }
 });
