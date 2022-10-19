@@ -1,3 +1,4 @@
+// HTML elements stored in variables
 var inputEl = document.getElementById("search-input");
 var searchBtnEl = document.getElementById("btn-search");
 var asideEl = document.getElementById("search");
@@ -27,13 +28,16 @@ var humid5El = document.getElementById("humid-5");
 var date5El = document.getElementById("date-5");
 
 var appid = "e2967007776a0bb2160348f32c03e15b";
+
+// variables to store name, latitude and longitude information.
 var cityName;
 var latitude = 0;
 var longitude = 0;
-var temp = 0;
-var wind = 0;
-var humid = 0;
 
+/**
+ * This function uses geoLocation api to get latitude and longitude and store in variables.
+ * @param {*} name 
+ */
 function getGeoLocation(name){
     var url = "http://api.openweathermap.org/geo/1.0/direct?q="+name+"&appid="+appid;
     fetch(url)
@@ -46,6 +50,12 @@ function getGeoLocation(name){
     });
 }
 
+/**
+ * This function uses api to get current weather information and display it on the page.
+ * @param {*} temperature 
+ * @param {*} speed 
+ * @param {*} humidity 
+ */
 function getCurrentWeatherInfo(temperature, speed, humidity){
     var url = "https://api.openweathermap.org/data/2.5/weather?lat="+latitude+"&lon="+longitude+"&appid="+appid;
     fetch(url)
@@ -59,6 +69,9 @@ function getCurrentWeatherInfo(temperature, speed, humidity){
     });
 }
 
+/**
+ * This function uses api to get five days weather forecast information and display it on the page.
+ */
 function getFiveDayWeatherInfo(){
     var url = "https://api.openweathermap.org/data/2.5/forecast?lat="+latitude+"&lon="+longitude+"&appid="+appid;
     fetch(url)
@@ -113,6 +126,10 @@ function getFiveDayWeatherInfo(){
     });
 }
 
+/**
+ * This function creates button element and display it on the page.
+ * @param {*} cityName 
+ */
 function addButton(cityName){
     var btn = document.createElement("button");
     btn.setAttribute("id", cityName);
@@ -122,6 +139,9 @@ function addButton(cityName){
     asideEl.appendChild(btn);
 }
 
+/**
+ * Event listener to responde to click events
+ */
 document.addEventListener("click", function(event){
     var child = event.target;
     if(child.matches("#btn-search")){
